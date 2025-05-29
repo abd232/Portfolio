@@ -1,0 +1,56 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100%;
+  margin: 0;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 6vh;
+  border-bottom: 0.5px solid #e5e7eb;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 1vw;
+  margin-right: 2vw;
+}
+
+.menu a {
+  outline: none;
+  text-decoration: none;
+  color: #4b5563;
+}
+
+.menu a:hover {
+  color: black;
+}
+.menu button {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 10px;
+  border: none;
+}
+.menu button :hover {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 10px;
+  background-color: black;
+  border: none;
+}
+
+main {
+  padding: 2vh 2vw 2vh 2vw;
+  background-color: #eff6ff;
+  height: 80vh;
+}
+
+footer {
+  height: 15vh;
+  background: black;
+}
