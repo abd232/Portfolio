@@ -1,15 +1,19 @@
 body {
+  display: flex;
+  flex-direction: column;
   align-items: stretch;
   height: 100%;
   margin: 0;
 }
 
 header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   height: 6vh;
   border-bottom: 0.5px solid #e5e7eb;
 }
 
-.menu1 {
+.menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,22 +21,22 @@ header {
   margin-right: 2vw;
 }
 
-.menu1 a {
+.menu a {
   outline: none;
   text-decoration: none;
   color: #4b5563;
 }
 
-.menu1 a:hover {
+.menu a:hover {
   color: black;
 }
-.menu1 button {
+.menu button {
   height: 2rem;
   width: 2rem;
   border-radius: 10px;
   border: none;
 }
-.menu1 button :hover {
+.menu button :hover {
   height: 2rem;
   width: 2rem;
   border-radius: 10px;
@@ -46,43 +50,7 @@ main {
   height: 80vh;
 }
 
-.twoColumnSection {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.firstColumnInSection {
-  margin-right: 1vw;
-}
-
-.secondColumnInSection {
-  margin-left: 1vw;
-  margin-right: 2vw;
-}
-
-.twoColumnSection footer {
+footer {
   height: 15vh;
   background: black;
-}
-
-.timeline-dot {
-  position: absolute;
-  top: 0px;
-  left: -8px;
-  width: 14px;
-  height: 14px;
-  background-color: #1a73e8;
-  border-radius: 50%;
-}
-
-.timeline-item {
-  position: relative;
-  padding-left: 30px;
-  margin-bottom: 30px;
-  border-left: 2px solid #1a73e8;
-}
-
-.timeline-date {
-  color: #1a73e8;
-  font-weight: bold;
 }
