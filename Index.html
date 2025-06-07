@@ -7,13 +7,14 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
   </head>
   <body>
-    <header>
-      <div style="margin-left: 2vw; margin-right: 1vw">
+    <header class="d-flex flex-row justify-content-xl-between align-items-xl-center">
+      <div style="margin-left: 2vw; margin-right: 1vw col-lg-6">
         <h4>Abdallah Abdalrhman</h4>
       </div>
-      <div class="menu">
+      <div class="menu1 col-lg-6">
         <a href="#Home"> Home </a>
         <a href="#About"> About </a>
         <a href="#Projects"> Projects </a>
@@ -25,18 +26,65 @@
       </div>
     </header>
     <main>
-      <section id="Home" class="twoColumnSection">
-        <div>
-          <h4>Hello 👋, I'm</h4>
-          <h1>
-            My name is<br />
-            <span> Abdallah Abdalrhman </span><br />
-            I am a computer engineer that
+      <section id="Home" class="row pt-20 pb-32">
+        <div class="col-lg-6">
+          <h4 class="text-xl md:text-2xl font-serif">Hello 👋, My name is</h4>
+          <h1 class="text-4xl md:text-5xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-6 font-serif">
+            <span> Abdallah Abdalrhman </span>
+            I'm a passionate <bold>computer engineer</bold>
           </h1>
+          <h4 class="col-lg-6">
+            I recently completed a 6-month internship as a Full Stack Developer
+            using ASP.NET and other modern technologies. In addition to my
+            training, I’ve taken the initiative to self-learn React and
+            continuously expand my knowledge in web development. I’m
+            enthusiastic about building efficient, scalable, and user-friendly
+            web applications.
+          </h4>
+        </div>
+        <div class="secondColumnInSection">hello</div>
+      </section>
+      <h1>About Me</h1>
+      <section id="About" class="twoColumnSection">
+        <p class="text-lg text-gray-600 dark:text-gray-300 mb-6 font-serif"> I recently completed a 6-month internship as a Full Stack Developer
+            using ASP.NET and other modern technologies. In addition to my
+            training, I’ve taken the initiative to self-learn React and
+            continuously expand my knowledge in web development. I’m
+            enthusiastic about building efficient, scalable, and user-friendly
+            web applications. </p>
+        <div>
+          <h3>Personal Journey</h3>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">OCT 2022 – JUN 2023</div>
+            <h4 class=>
+              <bold>Research And Development (R&D)</bold>
+            </h4>
+            <p class="text-gray-800">
+              PROGINEER | Ramallah
+            </p>
+            <p>
+              Training focused on Python libraries and their practical applications Learned Object-Oriented Programming (OOP) along with the concepts of Models, Views, and Controllers
+(MVC).
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">MAY 2024 – NOV 2024</div>
+            <h4>
+              <bold>Full stack web developer traineeship</bold>
+            </h4>
+            <p class="text-gray-800">
+              Go Global Enterprise Risk Management & IFRS solution | Ramallah
+            </p>
+            <p>
+              Completed a six-month full-stack web development traineeship in Ramallah Gained practical experience using the ASP.NET MVC framework as full stack web developer.
+            </p>
+          </div>
         </div>
       </section>
-      <section id="About" class="twoColumnSection"></section>
       <section id="Projects"></section>
+        <h3>Projects</h3>
       <section id="Skills"></section>
       <section id="Contact" class="twoColumnSection"></section>
     </main>
