@@ -1,9 +1,23 @@
 ﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Abdallah Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Abdallah Portfolio</title>
   </head>
   <body>
     <header>
@@ -278,10 +292,132 @@
           <span class="dot" onclick="currentSlide(2)"></span>
           <span class="dot" onclick="currentSlide(3)"></span>
         </div>
-        <div></div>
       </section>
-      <section id="Skills"></section>
-      <section id="Contact" class="twoColumnSection"></section>
+      <section id="Skills">
+        <div>
+          <h3 class="title">Backend</h3>
+          <ul>
+            <li>.NET</li>
+            <li>Spring boot</li>
+            <li>My SQL</li>
+            <li>SQL Server</li>
+            <li>PostgreSQL</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="title">Forntend</h3>
+          <ul>
+            <li><i class="fa-brands fa-react"></i>React</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Razor Pages</li>
+            <li>JavaScript</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="title">TOOLS</h3>
+          <ul>
+            <li>SQL Server</li>
+            <li>Eclips</li>
+            <li>Visual Studio</li>
+            <li>Vs code</li>
+            <li>Github</li>
+            <li>Azure</li>
+          </ul>
+        </div>
+      </section>
+      <section id="Contact" class="section-container bg-white">
+        <div class="m-2 p-2">
+          <h3 class="mb-3">Contact Me:</h3>
+          <form class="form-floating mb-3" method="post">
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="name"
+                name="name"
+              />
+              <label for="name">Name</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="name@example.com"
+                name="email"
+              />
+              <label for="email">Email</label>
+            </div>
+            <div class="form-floating">
+              <textarea
+                class="form-control"
+                placeholder="Leave a your message here"
+                id="message"
+                style="height: 100px"
+                name="message"
+              ></textarea>
+              <label for="message">Message</label>
+            </div>
+          </form>
+        </div>
+        <div class="p-2 m-2">
+          <div>
+            <i class="bi bi-envelope"></i>
+            <div>
+              <h3>Email</h3>
+              <p>Abdoss232353@gmail.com</p>
+            </div>
+          </div>
+          <div>
+            <i class="bi bi-telephone"></i>
+            <div>
+              <h3>Phone number</h3>
+              <p>+970593077392</p>
+            </div>
+          </div>
+          <div>
+            <i class="bi bi-geo-alt"></i>
+            <div>
+              <h3>location</h3>
+              <p>Ramallah, Palestine</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="footer">
+        <div class="d-flex">
+          <div class="col">
+            <h3>Portfolio</h3>
+            <p>
+              Crafting innovative web solutions with passion and expertise in
+              modern technologies. Dedicated to delivering high-quality and
+              user-friendly experiences with collaborative problem-solving.
+            </p>
+          </div>
+          <div class="col d-flex">
+            <div class="col">
+              <h3>Quick links</h3>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <h3>Contact</h3>
+              <p>Ramallah, Palestine</p>
+              <p>Abdoss232353@gmail.com</p>
+              <p>+970593077392</p>
+            </div>
+          </div>
+        </div>
+        <div class="copy-right-container"><p>© Made by Abdallah Abdalrhman &#10084;&#65039</p></div>
+      </section>
       <script src="assets\js\bootstrap.bundle.min.js"></script>
     </main>
   </body>
