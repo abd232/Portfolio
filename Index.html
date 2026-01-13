@@ -1,12 +1,4 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Document</title>
-  </head>
-  <body></body>
-</html>
-
-<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -15,43 +7,52 @@
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <title>Abdallah Portfolio</title>
   </head>
   <body>
     <header>
-      <div class="d-flex flex-column justify-content-center h-100">
-        <h4>Abdallah Abdalrhman</h4>
-      </div>
-      <div class="menu">
-        <a href="#Home"> Home </a>
-        <a href="#About"> About </a>
-        <a href="#Projects"> Projects </a>
-        <a href="#Skills"> Skills </a>
-        <a href="#Contact"> Contact </a>
-        <button>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-moon-icon lucide-moon"
+      <div class="header-container">
+        <div class="d-flex justify-content-around h-100 align-items-center">
+          <h4>Abdallah Abdalrhman</h4>
+        </div>
+        <div class="menu">
+          <a class="link" href="#Home"> Home </a>
+          <a class="link" href="#About"> About </a>
+          <a class="link" href="#Projects"> Projects </a>
+          <a class="link" href="#Skills"> Skills </a>
+          <a class="link" href="#Contact"> Contact </a>
+          <button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-moon-icon lucide-moon"
+            >
+              <path
+                d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"
+              />
+            </svg>
+          </button>
+          <a
+            href="javascript:void(0);"
+            class="icon"
+            onclick="displayNewMenu(this)"
           >
-            <path
-              d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"
-            />
-          </svg>
-        </button>
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
       </div>
     </header>
-    <main class="d-flex flex-column w-100">
-      <section id="Home" class="d-flex flex-row m-2">
+    <main class="w-100">
+      <section id="Home" class="d-flex flex-wrap">
         <div>
           <h1>
             Abdallah Abdalrhman<br />
@@ -133,13 +134,13 @@
             </div>
           </div>
         </div>
-        <div class="text-center">
+        <div class="text-center w-50">
           <img src="assets/images/homeImages.png" />
         </div>
       </section>
       <section id="About">
         <h1>About Me</h1>
-        <div class="d-flex">
+        <div class="d-flex flex-wrap">
           <div class="m-1 col-6">
             <p>
               I am Abdallah Abdalrhman i graduated as an computer Enginer in
@@ -389,8 +390,8 @@
         </div>
       </section>
       <section class="footer">
-        <div class="d-flex">
-          <div class="col">
+        <div class="d-flex flex-wrap">
+          <div>
             <h3>Portfolio</h3>
             <p>
               Crafting innovative web solutions with passion and expertise in
@@ -398,8 +399,8 @@
               user-friendly experiences with collaborative problem-solving.
             </p>
           </div>
-          <div class="col d-flex">
-            <div class="col">
+          <div class="d-flex w-100 justify-content-center flex-wrap">
+            <div class="col m-auto">
               <h3>Quick links</h3>
               <ul>
                 <li><a href="#">Home</a></li>
@@ -416,46 +417,11 @@
             </div>
           </div>
         </div>
-        <div class="copy-right-container"><p>© Made by Abdallah Abdalrhman &#10084;&#65039</p></div>
+        <div class="copy-right-container">
+          <p>© Made by Abdallah Abdalrhman &#10084;&#65039;</p>
+        </div>
       </section>
-      <script src="assets\js\bootstrap.bundle.min.js"></script>
     </main>
   </body>
+  <script src="assets/js/script.js"></script>
 </html>
-<script>
-  let slideIndex = 1;
-  showSlides(slideIndex);
-
-  // Next/previous controls
-  function plusSlides(n) {
-    showSlides((slideIndex += n));
-  }
-
-  // Thumbnail image controls
-  function currentSlide(n) {
-    showSlides((slideIndex = n));
-  }
-
-  function showSlides(n) {
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    for (var i = 0; i < dots.length; i++) {
-      dots[i].classList.remove("active");
-    }
-    if (slides.length == 1) {
-      dots[n].classList.add("active");
-    }
-    if (n == slides.length) {
-      for (var i = 0; i < n - 2; i++) slides[i].style.marginLeft = "-50%";
-      dots[n - 1].classList.add("active");
-      dots[n - 2].classList.add("active");
-    } else {
-      for (var i = 0; i < n - 1; i++) slides[i].style.marginLeft = "-50%";
-
-      for (var i = n - 1; i < slides.length; i++)
-        slides[i].style.marginLeft = "0";
-      dots[n - 1].classList.add("active");
-      dots[n].classList.add("active");
-    }
-  }
-</script>
