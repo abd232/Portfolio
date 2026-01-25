@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -51,25 +51,25 @@
         </div>
       </div>
     </header>
-    <main class="w-100">
-      <section id="Home" class="d-flex flex-wrap">
-        <div>
+    <main>
+      <section id="Home">
+        <div class="homeArticle">
           <h1>
             Abdallah Abdalrhman<br />
             <span>Full stack developer</span>
           </h1>
-          <p>
+          <p class="text-gray-600">
             Full Stack Developer Completed six-month training as a Asp.net full
             stack developer gained on it alot of exeprince and enrolled in real
             projects in that training.
           </p>
-          <div>
+          <div class="contact-link">
             <a href="https://www.facebook.com/abod20abod/" class="icon-link">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
+                width="38"
+                height="38"
+                viewBox="0 0 32 32"
                 fill="none"
                 stroke="#343a40"
                 stroke-width="2"
@@ -88,9 +88,9 @@
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
+                width="38"
+                height="38"
+                viewBox="0 0 32 32"
                 fill="none"
                 stroke="#343a40"
                 stroke-width="2"
@@ -108,9 +108,9 @@
             <a href="https://github.com/abd232" class="icon-link m-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
+                width="38"
+                height="38"
+                viewBox="0 0 32 32"
                 fill="none"
                 stroke="#343a40"
                 stroke-width="2"
@@ -124,18 +124,26 @@
                 <path d="M9 18c-4.51 2-5-2-7-2"></path>
               </svg>
             </a>
-            <div>
-              <button type="button" class="btn btn-primary">
-                Get in touch
-              </button>
-              <button type="button" class="btn btn-outline-dark">
-                View Projects
-              </button>
-            </div>
+          </div>
+          <div class="buttons-container">
+            <button
+              type="button"
+              onclick="goToProjects()"
+              class="btn btn-primary"
+            >
+              Get in touch
+            </button>
+            <button
+              type="button"
+              onclick="goToContact()"
+              class="btn btn-outline-dark"
+            >
+              View Projects
+            </button>
           </div>
         </div>
-        <div class="text-center w-50">
-          <img src="assets/images/homeImages.png" />
+        <div class="text-center">
+          <img class="homeImage" src="assets/images/homeImages.png" />
         </div>
       </section>
       <section id="About">
@@ -389,7 +397,7 @@
           </div>
         </div>
       </section>
-      <section class="footer">
+      <section id="Contact" class="footer">
         <div class="d-flex flex-wrap">
           <div>
             <h3>Portfolio</h3>

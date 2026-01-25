@@ -107,3 +107,15 @@ mediaQuery.addEventListener("change", (e) => {
     computerHeaderView();
   }
 });
+
+function goToProjects() {
+  document.getElementById("Projects").scrollIntoView({
+    behavior: "smooth",
+  });
+}
+
+function goToContact() {
+  document.getElementById("Contact").scrollIntoView({
+    behavior: "smooth",
+  });
+}

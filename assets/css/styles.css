@@ -37,6 +37,68 @@ section {
   padding: 22px 0;
   width: 90%;
   margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main {
+  background: linear-gradient(180deg, #eef5ff 0%, #f8fbff 20%, #ffffff 30%);
+}
+
+#Home {
+  padding: 10px 0 20px 0;
+  margin-bottom: 50px;
+  column-gap: 150px;
+  justify-content: start;
+}
+
+.contact-link {
+  display: flex;
+  justify-content: start;
+  gap: 16px;
+}
+
+.homeArticle {
+  flex: 2;
+  padding: 40px 0 40px 0;
+}
+
+.homeArticle > * {
+  margin: 20px 0;
+}
+
+.text-gray-600 {
+  color: #4b5563;
+  font-weight: 600;
+}
+
+.homeArticle h1 {
+  font-family: ui-serif, Georgia, "Cambria", "Times New Roman", Times, serif;
+  font-weight: 500;
+}
+
+.homeArticle span {
+  font-family: serif, ui-serif, Georgia, "Cambria", "Times New Roman", Times;
+  color: #2563eb;
+  font-weight: 800;
+}
+
+.homeImage {
+  width: 100%;
+  max-width: 500px;
+}
+
+.buttons-container {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.buttons-container button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
 .section-container {
@@ -85,7 +147,9 @@ header .icon i {
     display: inline-block;
     cursor: pointer;
   }
-
+  .link:hover {
+    text-decoration: underline;
+  }
   .menu {
     gap: 20px;
   }
@@ -129,10 +193,6 @@ header .icon i {
   align-items: center;
   font-weight: 100;
   font-size: 0.8rem;
-}
-
-main {
-  background-color: #eff6ff;
 }
 
 .icon-link svg {
@@ -338,7 +398,7 @@ main {
   background-color: rgb(17 24 39);
 }
 .footer h3,
-p {
+.footer p {
   color: gray;
 }
 
