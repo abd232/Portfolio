@@ -34,11 +34,28 @@ header div h4 {
 }
 
 section {
-  padding: 22px 0;
-  width: 90%;
-  margin: auto;
   display: flex;
   flex-wrap: wrap;
+  margin: auto;
+  padding: 22px 0;
+  width: 90%;
+}
+
+#About {
+  display: block;
+  margin: auto;
+}
+
+.About-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.About-container > div {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
 }
 
 main {
@@ -70,6 +87,17 @@ main {
 .text-gray-600 {
   color: #4b5563;
   font-weight: 600;
+}
+
+.bg-color-blue {
+  color: white;
+  background-color: #2563eb;
+  font: 1.2rem;
+}
+
+.bg-color-blue:hover {
+  color: white;
+  background-color: #1e40af;
 }
 
 .homeArticle h1 {
@@ -205,14 +233,14 @@ header .icon i {
 
 .timeline {
   position: relative;
-  margin-top: -30px;
-  margin-left: 25px;
-  border-left: 3px solid #007bff; /* Blue vertical line */
+  border-left: 2px solid #2563eb; /* Blue vertical line */
   padding-left: 25px;
 }
 
 .timeline-item {
-  position: relative;
+  position: absolute;
+  top: -30px;
+  margin-top: 30px;
   margin-bottom: 30px;
 }
 
@@ -222,16 +250,17 @@ header .icon i {
   top: -10px;
   width: 14px;
   height: 14px;
-  background-color: #007bff;
+  background-color: #2563eb;
   border-radius: 50%;
 }
 .timeline-content {
-  margin-top: 30px;
+  position: relative;
 }
+
 .timeline-content h4 {
   margin: 0;
   font-size: 0.9rem;
-  color: #007bff;
+  color: #2563eb;
   font-weight: 600;
 }
 
