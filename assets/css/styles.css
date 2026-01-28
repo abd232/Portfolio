@@ -238,16 +238,12 @@ header .icon i {
 }
 
 .timeline-item {
-  position: absolute;
-  top: -30px;
-  margin-top: 30px;
   margin-bottom: 30px;
 }
 
 .timeline-dot {
   position: absolute;
-  left: -33px;
-  top: -10px;
+  left: -8px;
   width: 14px;
   height: 14px;
   background-color: #2563eb;
@@ -272,9 +268,7 @@ header .icon i {
 
 .timeline-content p {
   margin: 3px 0;
-  font-size: 0.8rem;
   color: #333;
-  line-height: 1.5;
 }
 
 .timeline-content ul {
