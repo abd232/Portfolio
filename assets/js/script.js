@@ -1,12 +1,12 @@
 let slideIndex = 1;
+let mobileView = false;
+
 showSlides(slideIndex);
 
-// Next/previous controls
 function plusSlides(n) {
   showSlides((slideIndex += n));
 }
 
-// Thumbnail image controls
 function currentSlide(n) {
   showSlides((slideIndex = n));
 }
@@ -20,17 +20,15 @@ function showSlides(n) {
   if (slides.length == 1) {
     dots[n].classList.add("active");
   }
-  if (n == slides.length) {
-    for (var i = 0; i < n - 2; i++) slides[i].style.marginLeft = "-50%";
-    dots[n - 1].classList.add("active");
-    dots[n - 2].classList.add("active");
+  if (mobileView) {
+    for (var i = 0; i < n - 1; i++) {
+      slides[i].style.marginLeft = "-100%";
+    }
   } else {
-    for (var i = 0; i < n - 1; i++) slides[i].style.marginLeft = "-50%";
+    for (var i = 0; i < n - 1; i++) slides[i].style.marginLeft = "-650px";
 
     for (var i = n - 1; i < slides.length; i++)
-      slides[i].style.marginLeft = "0";
-    dots[n - 1].classList.add("active");
-    dots[n].classList.add("active");
+      slides[i].style.marginLeft = "24px";
   }
 }
 
@@ -101,8 +99,12 @@ if (mediaQuery.matches) {
 mediaQuery.addEventListener("change", (e) => {
   if (e.matches) {
     // switched to mobile
+    mobileView = true;
+    showSlides(slideIndex);
     mobileHeaderView();
   } else {
+    mobileView = false;
+    showSlides(slideIndex);
     // switched to desktop
     computerHeaderView();
   }
