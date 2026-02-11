@@ -34,6 +34,10 @@ header div h4 {
 }
 
 section {
+  width: 100%;
+}
+
+section > div {
   display: flex;
   flex-wrap: wrap;
   margin: auto;
@@ -170,19 +174,6 @@ header .icon i {
   align-content: center;
 }
 
-@media screen and (max-width: 950px) {
-  header .icon {
-    display: inline-block;
-    cursor: pointer;
-  }
-  .link:hover {
-    text-decoration: underline;
-  }
-  .menu {
-    gap: 20px;
-  }
-}
-
 .font-weight-300 {
   font-weight: 300;
 }
@@ -298,29 +289,45 @@ header .icon i {
   width: 90%;
 }
 
+.scroll-container {
+  display: flex;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
 .slideshow-container {
   position: relative;
-  overflow: scroll;
   display: flex;
+  overflow-x: scroll;
   flex-direction: row;
-  width: 1000%;
+  gap: 40px;
+  padding: 0 40px;
   align-items: center;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   height: 660px;
 }
 
+.slideshow-container ::-webkit-scrollbar {
+  display: none;
+}
+
+.end-space {
+  flex: 0 0 200px;
+  height: 1px;
+}
+
 .mySlides {
-  flex: 2;
-  min-width: 300px;
-  max-width: 600px;
+  flex: 0 0 48%;
   height: 80%;
   border: 2px solid rgb(229, 231, 235);
   border-radius: 15px;
   transition:
     transform 0.35s ease,
     box-shadow 0.35s ease;
-  margin-right: 20px;
-  margin-left: 24px;
-  margin-top: 20px;
   margin-bottom: 20px;
   transform-origin: center;
 }
@@ -329,6 +336,11 @@ header .icon i {
   transform: scale(1.08);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
   z-index: 10;
+}
+
+.mySlides > *,
+.card-body > * {
+  margin: 30px 0;
 }
 
 /* Next & previous buttons */
@@ -379,8 +391,8 @@ header .icon i {
 
 .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
+  height: 12px;
+  width: 12px;
   margin: 0 2px;
   background-color: #bbb;
   border-radius: 50%;
@@ -390,6 +402,33 @@ header .icon i {
 
 .bg-white {
   background-color: white;
+}
+
+@media screen and (max-width: 950px) {
+  header .icon {
+    display: inline-block;
+    cursor: pointer;
+  }
+  .link:hover {
+    text-decoration: underline;
+  }
+  .menu {
+    gap: 20px;
+  }
+  .mySlides {
+    min-width: 280px;
+  }
+  .slideshow-container {
+    width: 90%;
+    padding: 0;
+    margin: 0 auto;
+    overflow-x: scroll !important;
+  }
+  .mySlides:hover {
+    transform: scale(1.03);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+  }
 }
 
 #Skills {
