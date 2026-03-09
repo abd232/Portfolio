@@ -166,6 +166,42 @@ function goToProjects() {
   });
 }
 
+const targetPage = document.querySelector("#githup-activity");
+const contributionsNumberspan = document.querySelector("#contributions_number");
+const repoNumberspan = document.querySelector("#repo_number");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        console.log("Reached target page!");
+        for (var i = 0; i < 200; i++) {
+          let count = 0;
+          let count2 = 0;
+          const interval = 2000 / 200; // 10ms per step
+
+          const timer = setInterval(() => {
+            count += 2;
+            if (count % 8 === 0) count2 += 1;
+            contributionsNumberspan.textContent = count;
+            repoNumberspan.textContent = count2;
+
+            if (count >= 200) {
+              clearInterval(timer);
+            }
+          }, interval);
+          repoNumberspan.textContent = count2 + 5;
+        }
+      }
+    });
+  },
+  {
+    threshold: 0.5,
+  },
+);
+
+observer.observe(targetPage);
+
 function goToContact() {
   document.getElementById("Contact").scrollIntoView({
     behavior: "smooth",
