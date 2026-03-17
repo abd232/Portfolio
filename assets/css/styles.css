@@ -133,16 +133,10 @@ main {
   cursor: pointer;
 }
 
-.section-container {
-  display: flex;
-  justify-content: center;
+.section-container div {
+  flex: 1;
   gap: 70px;
   flex-wrap: wrap;
-  padding: 16px;
-}
-
-.section-container div {
-  min-width: 500px;
 }
 
 .menu {
